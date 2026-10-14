@@ -20,7 +20,7 @@ class Internacionales inherits Packs {
     override method valor() = super() / 20
 }
 
-object coordinador {
+class Coordinador {
     var property cantidadDeViajesRealizados
     var property estaMotivado
     var property añosDeExperiencia
