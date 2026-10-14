@@ -7,7 +7,8 @@ class Packs {
 
 
 class nacionales inherits Packs {
-
+    const property provinciaDestino
+    const property actividades incluidad = []
 }
 
 class internacionales inherits Packs {
