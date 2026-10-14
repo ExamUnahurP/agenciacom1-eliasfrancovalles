@@ -37,19 +37,11 @@ class Coordinador {
     }
 }
 
-object beneficiosEspeciales {
-    var beneficiosOpcionales = ["Traslados privados", "Acceso a salas VIP", "Seguros adicionales"]
-    const property tipo
-    const property costo
-    var property estaVigente
-
-    method costoVigente() = if (estaVigente == true) costo
-}
-
 class BeneficiosOpcionales {
-    var property tipo = ["TrasladosPrivados", "AccesoASalasVip", "SegurosAdicionales"]
+    const property tipo = #{"TrasladosPrivados", "AccesoASalasVip", "SegurosAdicionales"}
     var property costo
-     property estaVigente
+    var property estaVigente
     
     method costoVigente() = if (estaVigente == true) costo
 }
+
