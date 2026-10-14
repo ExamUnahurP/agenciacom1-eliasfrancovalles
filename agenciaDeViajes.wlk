@@ -4,7 +4,11 @@ class Packs {
     const property beneficiosEspeciales = []
     const property coordinadorACargo
     
-    method valorFinal() = precioBase + self.costoTotalVigente
+    method beneficiosVigentes() = beneficio.filter({beneficio => beneficio.costo()})
+
+    
+
+    method valorFinal() = precioBase + self.costoTotalVigentes()
 }
 
 class Nacionales inherits Packs {
@@ -37,11 +41,9 @@ class Coordinador {
     }
 }
 
-class BeneficiosOpcionales {
+class Beneficio {
     const property tipo = #{"TrasladosPrivados", "AccesoASalasVip", "SegurosAdicionales"}
     var property costo
     var property estaVigente
-    
-
 }
 
