@@ -39,12 +39,15 @@ object beneficiosEspeciales {
     var beneficiosOpcionales = ["Traslados privados", "Acceso a salas VIP", "Seguros adicionales"]
     const property tipo
     const property costo
-    const property estaVigente
+    var property estaVigente
 
     method costoVigente() = if (estaVigente == true) costo
 }
 
-class beneficiosOpcionales {
-
+object beneficiosOpcionales {
+    const property tipo = ["TrasladosPrivados", "AccesoASalasVip", "SegurosAdicionales"]
+    const property costo
+    const property estaVigente
+    
+    method costoVigente() = if (estaVigente == true) costo
 }
-
