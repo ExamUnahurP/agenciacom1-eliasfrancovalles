@@ -3,13 +3,15 @@ class Packs {
     const property precioBase
     const property beneficiosEspeciales
     const property coordinadorACargo
+    
+    method valor() = precioBase + 
 }
 
 class Nacionales inherits Packs {
     const property provinciaDestino
     const property actividadesIncluidas = [""]
 
-    method valor() = 
+    method valor() = precioBase 
 }
 
 class Internacionales inherits Packs {
