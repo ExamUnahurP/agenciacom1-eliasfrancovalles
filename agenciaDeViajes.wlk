@@ -4,7 +4,7 @@ class Packs {
     const property beneficiosEspeciales = []
     const property coordinadorACargo
     
-    method valor() = precioBase + beneficiosEspeciales.costoVigente()
+    method valorFinal() = precioBase + self.costoTotalVigente
 }
 
 class Nacionales inherits Packs {
@@ -17,7 +17,7 @@ class Internacionales inherits Packs {
     var property cantidadDeEscalas
     var property esDeInteres
 
-    override method valor() = super() / 20
+    override method valorFinal() = super() * 1.20
 }
 
 class Coordinador {
@@ -42,6 +42,6 @@ class BeneficiosOpcionales {
     var property costo
     var property estaVigente
     
-    method costoVigente() = if (estaVigente == true) costo
+
 }
 
