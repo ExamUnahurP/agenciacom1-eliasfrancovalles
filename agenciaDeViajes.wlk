@@ -4,7 +4,7 @@ class Packs {
     const property beneficiosEspeciales
     const property coordinadorACargo
     
-    method valor() = precioBase + beneficiosEspeciales.costo()
+    method valor() = precioBase + beneficiosEspeciales.costoVigente()
 }
 
 class Nacionales inherits Packs {
@@ -40,5 +40,7 @@ object beneficiosEspeciales {
     const property tipo
     const property costo
     const property estaVigente
+
+    method costoVigente() = if (estaVigente == true) costo
 }
 
