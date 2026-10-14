@@ -5,6 +5,10 @@ class Packs {
     const property coordinadorACargo = []
 }
 
+object pack {
+    var tipo = [nacionales, internacionales]
+}
+
 
 class Nacionales inherits Packs {
     const property provinciaDestino
@@ -30,4 +34,10 @@ object coordinador {
             self.error("excepcion")
         }
     }
+}
+
+object beneficiosEspeciales {
+    var beneficiosOpcionales = ["Traslados privados", "Acceso a salas VIP", "Seguros adicionales"]
+    const tipo
+    var property estaVigente
 }
