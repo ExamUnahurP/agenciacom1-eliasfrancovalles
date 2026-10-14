@@ -5,19 +5,16 @@ class Packs {
     const property coordinadorACargo
 }
 
-object pack {
-    var tipo = [nacionales, internacionales]
-}
-
-
 class Nacionales inherits Packs {
     const property provinciaDestino
-    const property actividadesIncluidas = []
+    const property actividadesIncluidas = [""]
+
+    method valor() = 
 }
 
 class Internacionales inherits Packs {
     const property paisDestino
-    const property cantidadEscalas
+    const property cantidadDeEscalas
     const property esDeInteres
 }
 
@@ -38,6 +35,8 @@ object coordinador {
 
 object beneficiosEspeciales {
     var beneficiosOpcionales = ["Traslados privados", "Acceso a salas VIP", "Seguros adicionales"]
-    const tipo
-    var property estaVigente
+    const property tipo
+    const property costo
+    const property estaVigente
 }
+
