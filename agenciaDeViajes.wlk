@@ -4,20 +4,20 @@ class Packs {
     const property beneficiosEspeciales
     const property coordinadorACargo
     
-    method valor() = precioBase + 
+    method valor() = precioBase + beneficiosEspeciales.costo()
 }
 
 class Nacionales inherits Packs {
     const property provinciaDestino
     const property actividadesIncluidas = [""]
-
-    method valor() = precioBase 
 }
 
 class Internacionales inherits Packs {
     const property paisDestino
     const property cantidadDeEscalas
     const property esDeInteres
+
+    override method valor() = super() / 20
 }
 
 object coordinador {
