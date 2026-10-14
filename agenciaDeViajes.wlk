@@ -28,7 +28,13 @@ object coordinador {
 
     const rolesValidos = #{"Guia", "Asistente logistico", "Acompañante"}
     
-    method rolValido(nuevoRol) {}
+    method rolInvalido(nuevoRol) {
+        if(not rolesValidos.contains(nuevoRol)) {
+            self.error("rol excepcion")
+        } else {
+            rol = nuevoRol
+        }
+    }
 }
 
 object beneficiosEspeciales {
