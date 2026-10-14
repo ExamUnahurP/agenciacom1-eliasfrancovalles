@@ -1,12 +1,15 @@
-packs {
-    
+class Packs {
+    const property duracionEnDias
+    const property precioBase
+    const property beneficiosEspeciales
+    const property coordinadorACargo
 }
 
 
-nacionales {
+class nacionales inherits Packs {
 
 }
 
-internacionales {
+class internacionales inherits Packs {
 
 }
