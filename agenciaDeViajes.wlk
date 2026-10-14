@@ -1,38 +1,34 @@
 class Packs {
-    const property duracionEnDias
-    const property precioBase
-    const property beneficiosEspeciales
+    var property duracionEnDias
+    var property precioBase
+    const property beneficiosEspeciales = []
     const property coordinadorACargo
     
     method valor() = precioBase + beneficiosEspeciales.costoVigente()
 }
 
 class Nacionales inherits Packs {
-    const property provinciaDestino
+    var property provinciaDestino
     const property actividadesIncluidas = [""]
 }
 
 class Internacionales inherits Packs {
-    const property paisDestino
-    const property cantidadDeEscalas
-    const property esDeInteres
+    var property paisDestino
+    var property cantidadDeEscalas
+    var property esDeInteres
 
     override method valor() = super() / 20
 }
 
 object coordinador {
-    const property cantidadDeViajesRealizados
-    const property estaMotivado
-    const property añosDeExperiencia
-    const rol = "Guia"
+    var property cantidadDeViajesRealizados
+    var property estaMotivado
+    var property añosDeExperiencia
+    var rol = "Guia"
+
+    const rolesValidos = #{"Guia", "Asistente logistico", "Acompañante"}
     
-    method rol(cambio) {
-        if (cambio == "Guia" and cambio == "Asistente logistico" and cambio == "Acompañante") {
-            rol = cambio
-        } else {
-            self.error("excepcion")
-        }
-    }
+    method rolValido(nuevoRol) {}
 }
 
 object beneficiosEspeciales {
