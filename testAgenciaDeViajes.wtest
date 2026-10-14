@@ -1,5 +1,6 @@
 import agenciaDeViajes.*
 
 test "un pack nacional sin beneficios vigentes devuelve el mismo precio base" {
-    beneficiosEspeciales.e
+    const estaVigente = new 
+    assert.equals()
 }

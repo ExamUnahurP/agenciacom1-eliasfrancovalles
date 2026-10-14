@@ -44,3 +44,7 @@ object beneficiosEspeciales {
     method costoVigente() = if (estaVigente == true) costo
 }
 
+class beneficiosOpcionales {
+
+}
+
